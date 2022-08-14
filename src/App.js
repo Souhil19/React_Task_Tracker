@@ -43,14 +43,11 @@ function App() {
     )
   }
 
-  const name ='Souhil';
-  const x= true;
 
   return (
     <div className='container'>   
       <Header onAdd={ ()=> setShowAddTask(!showAddTask) } showAdd={showAddTask} />
       {showAddTask && <AddTask onAdd={ addTask}/>}      
-      <h1>{ x ? name : 'no'}*3</h1>
       {tasks.length>0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/> :'No Tasks for today'}
     </div>
 
